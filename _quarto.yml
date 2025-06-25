@@ -1,0 +1,13 @@
+project:
+  output-dir: docs
+
+format:
+  revealjs:
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+#    logo: vzglogo.png
+    logo: ts4nfdi-logo.png
+    incremental: true
+    css: style.css

@@ -1,0 +1,88 @@
+---
+title: TS4NFDI support for semantic metadata
+subtitle: 2nd NFDI Metadata Workshop
+date: 2025-06-25
+doi: 10.5281/zenodo.15736141
+authors:
+ - name: Jakob Voß
+---
+
+# Outline
+
+- Semantic Metadata and Terminologies
+- TS4NFDI and its Services
+
+# Semantic Metadata?
+
+- All meaningful metadata is semantic!
+- Semantic does not imply interoperability
+- Shared semantics allow for interoperability
+
+# It's all about identifiers!
+
+- `64 61 74 65` $\Rightarrow$ "date" in ASCII/Unicode
+- `date` $\Rightarrow$ ? in ?
+- `date` $\Rightarrow$ `http://purl.org/dc/terms/date` in DC
+- `http://purl.org/dc/terms/date` $\Rightarrow$ "A point or period of time associated with an event in the lifecycle of the resource" in DC
+- *data/identifier* $\Rightarrow$ *semantics* in *format/schema/terminology*
+
+# Terminologies give context to identifiers
+
+- **Terminology** (Dublin Core Elements, schema.org...)
+- Names ("Date", "Datum"...)
+- Description ("A point or period of time...")
+- Related entities (`created`, `dateSubmitted`...)
+- Rules (ISO 8601-1 date/time value, created < submitted, ...)
+- Mappings (`dc:created` = `schema:dateCreated`...)
+
+# Terminology Services 4 NFDI (TS4NFDI)
+
+- BASE4NFDI project, integration phase 2025 & 2026
+- Joint effort of ZB Med, InfAI, TIB, RPTU, VZG
+- "provision, curation, development, harmonization and mapping of terminologies"
+- Standardise and harmonise terminology management within the NFDI
+
+# Working Packages
+
+1. TS4NFDI Service Portal <https://terminology.services.base4nfdi.de/>
+2. **Mapping Service** <https://coli-conc.gbv.de/cocoda/ts4nfdi/>
+3. Terminology Curation
+4. **API Gateway** <https://ts4nfdi.github.io/api-gateway>
+5. **Terminology Service Suite** <https://github.com/ts4nfdi/terminology-service-suite>
+6. Community engagement, communication, and training
+
+# API Gateway
+
+- Meta search for terminology services\
+  (OLS, OntoPortal, Skosmos, JSKOS, GND...)
+- Server-side integration: one API to query them all
+- Create and publish collections/lists of terminologies
+
+# Mapping Service
+
+- Create and review mappings with a nice UI
+- Create, edit, annotate mappings via API
+
+---
+
+![](cocoda-screenshot.png){width=100% height=85%}
+
+# Terminology Service Suite
+
+- React library to interact with terminologies
+- Search, Infobox, Tree-view...
+- Common data model to be used with API Gateway
+
+# Please contact us!
+
+- Have a look and try out!
+- Incubators: Bring you use cases!
+
+# Limitations and related projects
+
+- Most data formats are not terminologies
+- But they often make use of terminologies
+- Current MOD data model lacks multilinguality and mappings (have a look at JSKOS instead)
+- Similar client-side integration with cocoda-sdk
+- Project BARTOC: Terminology Registry build with data librarians
+
